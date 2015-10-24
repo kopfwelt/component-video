@@ -1,0 +1,25 @@
+{
+  "name": "component-video",
+  "version": "0.1.0",
+  "description": "Video component",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kopfwelt/component-video.git"
+  },
+  "author": {
+    "name": "Steve Sinnwell",
+    "email": "steve@kopfwelt.com"
+  },
+  "homepage": "http://code.kopfwelt.com/components/video/",
+  "keywords": [
+    "components",
+    "es6",
+    "video"
+  ],
+  "license": "NOLICENCE",
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
