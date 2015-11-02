@@ -21,5 +21,11 @@
     "node": ">=0.12.0"
   },
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-core": "^5.6.15",
+    "browser-sync": "^2.9.11",
+    "gulp": "^3.9.0",
+    "gulp-hb": "^2.6.5",
+    "gulp-notify": "^2.2.0"
+  }
 }
