@@ -1,7 +1,7 @@
 /**
- * FormValidation
+ * Video component
  *
- * @usage ContactForm extends FormValidated
+ * @usage 
  */
 class ComponentVideo {
 	
