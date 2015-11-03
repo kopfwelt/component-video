@@ -3,7 +3,7 @@
  *
  * @usage 
  */
-class ComponentVideo {
+class ComponentVideoYoutubeFullscreen mixin(ComponentVideoFullscreen, ComponentVideo) {
 
 	/**
 	 * public

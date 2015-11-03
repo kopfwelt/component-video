@@ -3,6 +3,8 @@
  *
  * @usage ContactForm extends FormValidated
  */
-class ComponentVideoFullscreen {
+class ComponentVideoFullscreen extends ComponentVideo {
 	
 }
+
+module.exports = ComponentVideoFullscreen
