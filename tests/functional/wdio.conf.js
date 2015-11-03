@@ -10,7 +10,7 @@ exports.config = {
      * specify test files
      */
     specs: [
-        './tests/functional/specs/ComponentVideo.js'
+        './tests/functional/specs/**/*.test.js'
     ],
     exclude: [],
 
