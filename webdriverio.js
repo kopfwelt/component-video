@@ -5,6 +5,8 @@ const notify = require('gulp-notify');
 
 const browserSync = require('browser-sync').create();
 
+var server = null;
+
 // use this to test after you build the project
 gulp.task('default', ['handlebars', 'sass', 'javascript'], () => {
   browserSync.init({
@@ -20,7 +22,10 @@ gulp.task('handlebars', () => {
 	return gulp.src('src/templates/index.hbs')
 		.pipe(hb({
 			// helpers: 'app/templates/helpers/*.js',
-			partials: 'src/templates/*.hbs',
+			partials: [
+				'src/templates/*.hbs',
+				'node_modules/component*/**/*.hbs'
+			],
 			bustCache: true
 		}))
 		.on('error', notify.onError(error => `Handlebars error: ${error}`))
@@ -56,24 +61,7 @@ gulp.task('test:unit', () => {
 });
 
 
-import webdriver from 'gulp-webdriver';
-const path = require('path');
 
-gulp.task('test:functional', function() {
-    return gulp.src('./tests/functional/wdio.conf.js', {read: false})
-        .pipe(webdriver({
-            wdioBin:  path.join(__dirname, 'node_modules', '.bin', 'wdio'),
-            desiredCapabilities: {
-                browserName: 'phantomjs'
-            }
-        }));
-        // .once('end', function () {
-        //     selenium.child.kill();
-        // });
-    //     .pipe(webdriver({
-    // 	wdioBin: 'wdio'
-    // }));
-});
 
 // const autoprefixer = require('autoprefixer');
 // const browserSync = require('./serve');

@@ -3,8 +3,13 @@ exports.config = {
     /**
      * server configurations
      */
-    host: '0.0.0.0',
-    port: 4444,
+    // host: '0.0.0.0',
+    // port: 4444,
+
+    host: 'ondemand.saucelabs.com',
+    port: 80,
+    user: process.env.SAUCE_USERNAME,
+    key: process.env.SAUCE_ACCESS_KEY,
 
     /**
      * specify test files
@@ -17,9 +22,18 @@ exports.config = {
     /**
      * capabilities
      */
+    // capabilities: [{
+    //     browserName: 'firefox'
+    // }],
+
     capabilities: [{
-        browserName: 'firefox'
+        browserName: 'chrome',
+        version: '27',
+        platform: 'XP',
+        tags: ['examples'],
+        name: 'This is an example test'
     }],
+
 
     /**
      * test configurations
@@ -27,7 +41,7 @@ exports.config = {
     logLevel: 'silent',
     coloredLogs: true,
     screenshotPath: 'shots',
-    baseUrl: 'http://webdriver.io',
+    baseUrl: 'http://code.kopfwelt.com/components/video/examples/',
     waitforTimeout: 10000,
     framework: 'mocha',
 
