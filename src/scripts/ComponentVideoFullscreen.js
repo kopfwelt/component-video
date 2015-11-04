@@ -1,10 +1,19 @@
+import ComponentVideo from 'ComponentVideo';
+
 /**
- * FormValidation
- *
- * @usage ContactForm extends FormValidated
+ * Displays videos like background cover
  */
 class ComponentVideoFullscreen extends ComponentVideo {
-	
+
+	constructor() {
+		super();
+		this.resize()
+	}
+
+	resize() {
+
+	}
+
 }
 
 module.exports = ComponentVideoFullscreen

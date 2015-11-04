@@ -1,9 +1,8 @@
 var assert = require('assert');
 
-describe('webdriver.io page', function() {
+describe('Fullscreen video', function() {
 
-    it('should have the right title - the good old callback way', function(done) {
-
+    it('should cover the whole page', function(done) {
         browser
             .url('/')
             .getTitle(function(err, title) {
@@ -11,8 +10,12 @@ describe('webdriver.io page', function() {
                 assert.equal(title, 'Video component');
             })
             .call(done);
-
     });
+
+    it('should autoplay', function(done) {
+        browser
+            .url('/')
+    })
 
     // it('should have the right title - the promise way', function() {
 

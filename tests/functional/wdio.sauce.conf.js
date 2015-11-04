@@ -41,7 +41,7 @@ exports.config = {
     logLevel: 'silent',
     coloredLogs: true,
     screenshotPath: 'shots',
-    baseUrl: 'http://code.kopfwelt.com/components/video/examples/',
+    baseUrl: 'http://kopfwelt.local:9000/',
     waitforTimeout: 10000,
     framework: 'mocha',
 
