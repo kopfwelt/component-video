@@ -1,4 +1,6 @@
-var requireDir = require('require-dir')
+const gulp = require('gulp');
+const requireDir = require('require-dir');
 
-// Require all tasks in gulpfile.js/tasks, including subfolders
-requireDir('./tasks', { recurse: true })
+requireDir('../node_modules/gulp-tasks/tasks', {recurse: true});
+
+gulp.task('test', ['webpack']);
